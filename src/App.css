@@ -1,38 +1,69 @@
-.App {
-  text-align: center;
+.container {
+  width: 100%;
+  position: fixed;
+  top: 20rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Sidebar Css */
+.mainstep {
+
+  position: fixed;
+  left: 20rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.stepleft {
+  position: fixed;
+  left: 7rem;
+  margin-top: -2.3rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.head3 {
+  margin-left: 1.3rem;
+}
+.head4 {
+  margin-left: 1.3rem;
 }
 
-.App-link {
-  color: #61dafb;
+/* Form Css */
+.form-container{
+  margin-left: 32rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.forms{
+margin-top: 4rem;
+position: relative;
+right: 2rem;
+
+}
+
+input{
+width: 40%;
+margin: 20px 30px;
+outline: 0;
+border: none;
+border-bottom:1px solid #999999 ;
+color: blue;
+font-size: 1rem;
+
+}
+
+.input-label{
+display: block;
+position: absolute;
+top: -6px;
+left:29px;
+font-size:1em ;
+color: #999999;
+text-transform: capitalize;
+transition: 0.3s ease;
+}
+
+.select{
+display: block;
+border: none;
+outline: 0;
+position: absolute;
+left: 6rem;
+
 }

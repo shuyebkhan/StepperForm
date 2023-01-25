@@ -1,0 +1,24 @@
+.mainstep{
+     position: fixed;
+     top: 20rem;
+     left: 20rem;
+     /* left: 33rem; */
+}
+
+.stepleft{
+     
+      position: fixed;
+       left: 7rem;
+       /* left: 17%; */
+       margin-top: -2.3rem
+}
+ 
+.head3{
+     margin-left: 1.3rem; 
+}
+.head4{  
+    margin-left: 1.3rem;
+}
+
+
+

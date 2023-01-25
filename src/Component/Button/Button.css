@@ -1,0 +1,23 @@
+.btn{
+     position: fixed;
+     right: 10rem;
+      bottom: 11rem;
+}
+
+.btn1{
+     background-color: transparent;
+     width: 5rem;
+     border: none;
+     font-size: 1rem;
+     color: #999999;
+     cursor: pointer;
+}
+
+.btn2{
+    background-color: transparent;
+    width: 5rem;
+    border: none;
+    font-size: 1rem;
+    color: blue;
+    cursor: pointer;
+}

@@ -1,0 +1,15 @@
+*{
+    padding: 0;
+    margin: 0;
+     box-sizing: border-box;
+ }
+ .header{
+       font-weight: 100;
+       position: fixed;
+       top: 3rem;
+       left: 8rem;
+       /* left: 15rem; */
+       font-size: large;
+       
+       
+ }

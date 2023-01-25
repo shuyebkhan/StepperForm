@@ -1,0 +1,41 @@
+.form-container{
+          margin-top: 21rem;
+          margin-left: 32rem;
+}
+.forms{
+    margin-top: 4rem;
+   position: relative;
+   right: 2rem;
+   
+}
+
+input{
+    width: 40%;
+    margin: 20px 30px;
+    outline: 0;
+    border: none;
+    border-bottom:1px solid #999999 ;
+    color: blue;
+    font-size: 1rem;
+  
+}
+
+.input-label{
+      display: block;
+       position: absolute;
+       top: -6px;
+       left:29px;
+       font-size:1em ;
+       color: #999999;
+       text-transform: capitalize;
+       transition: 0.3s ease;
+}
+
+.select{
+     display: block;
+     border: none;
+      outline: 0;
+      position: absolute;
+      left: 6rem;
+     
+}
