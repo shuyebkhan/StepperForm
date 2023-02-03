@@ -1,12 +1,6 @@
 import { Stepper, Step, StepLabel } from "@mui/material";
-import { useState } from "react";
 
 function Sidebar(props) {
-  // const [active, setActive] = useState(0);
-   
-
-
-
   return (
     <>
       <div className="mainstep">
@@ -17,7 +11,7 @@ function Sidebar(props) {
               {" "}
               <div className="stepleft">
                 <h2 className="head3" style={{ paddingLeft: "3.6rem" }}>
-                  import file
+                  Import file
                 </h2>{" "}
                 <h3 className="head4">Browser and Upload</h3>
               </div>{" "}
@@ -65,9 +59,6 @@ function Sidebar(props) {
           <Step></Step>
         </Stepper>
       </div>
-
-
-     
     </>
   );
 }

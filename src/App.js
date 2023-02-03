@@ -6,7 +6,6 @@ import Form from "./Component/Form/Form";
 import { useState } from "react";
 
 
-
 function App() {
   const [active, setActive] = useState(0);
 
@@ -19,15 +18,23 @@ function App() {
   }
 
   return (
-    <>
+    <div>
       <Header />
       <div className="container">
         <Sidebar data={active} />
-        <Form />
+        <Form file={active} />
+      
       </div>
 
-      <Button increment={handleNext} decrement={handleBack} data={active} />
-    </>
+      <div className="btn-container">
+        <Button handleOnClick={handleBack} isDisabled={active===0} formId="formOne">
+          Prev
+        </Button>
+        <Button handleOnClick={handleNext} isDisabled={active===3} formId="formOne">
+          Next
+        </Button>
+      </div>
+    </div>
   );
 }
 

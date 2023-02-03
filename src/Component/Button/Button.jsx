@@ -1,25 +1,16 @@
 import "./Button.css";
 
-function Button(props) {
+function Button({handleOnClick,isDisabled,children,formId}) {
   return (
-    <>
-      <div className="btn">
-        <button
-          className="btn1"
-          onClick={props.decrement}
-          disabled={props.data === 0}
-        >
-          Prev
-        </button>
-        <button
-          className="btn2"
-          onClick={props.increment}
-          disabled={props.data === 3}
-        >
-          Next
-        </button>
-      </div>
-    </>
+    
+    <button
+    className={ isDisabled ? "btn1": "btn2"}
+    onClick={handleOnClick}
+    disabled={isDisabled}
+     form={formId}
+   >
+    {children}
+  </button>
   );
 }
 
