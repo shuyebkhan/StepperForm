@@ -5,9 +5,9 @@ import Button from "./Component/Button/Button";
 import Form from "./Component/Form/Form";
 import { useState } from "react";
 
-
 function App() {
   const [active, setActive] = useState(0);
+
 
   function handleNext() {
     setActive(active + 1);
@@ -22,15 +22,23 @@ function App() {
       <Header />
       <div className="container">
         <Sidebar data={active} />
-        <Form file={active} />
-      
+        <Form file={active} handleNext={handleNext} />
       </div>
 
       <div className="btn-container">
-        <Button handleOnClick={handleBack} isDisabled={active===0} formId="formOne">
+        <Button
+          handleOnClick={handleBack}
+          isDisabled={active === 0}
+        
+        >
           Prev
         </Button>
-        <Button handleOnClick={handleNext} isDisabled={active===3} formId="formOne">
+        <Button
+          // handleOnClick={handleNext}
+          isDisabled={active === 3}
+          formId="formOne"
+          type="submit"  
+        >
           Next
         </Button>
       </div>
