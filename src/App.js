@@ -8,7 +8,6 @@ import { useState } from "react";
 function App() {
   const [active, setActive] = useState(0);
 
-
   function handleNext() {
     setActive(active + 1);
   }
@@ -26,18 +25,14 @@ function App() {
       </div>
 
       <div className="btn-container">
-        <Button
-          handleOnClick={handleBack}
-          isDisabled={active === 0}
-        
-        >
+        <Button handleOnClick={handleBack} isDisabled={active === 0} >
           Prev
         </Button>
         <Button
           // handleOnClick={handleNext}
-          isDisabled={active === 3}
+          isDisabled={active === 4}
           formId="formOne"
-          type="submit"  
+          type="submit"
         >
           Next
         </Button>

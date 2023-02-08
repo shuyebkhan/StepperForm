@@ -1,94 +1,92 @@
-import React, { useState } from "react";
+import { useForm } from "react-hook-form";
 
 export function DataMapping({ formID, handleNext }) {
-  const [inputValues, setInputValues] = useState({
-    fName: "",
-    lName: "",
-    number: "",
-    city: "",
-  });
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
 
-  const [validation, setValidation] = useState({
-    fName: "",
-    lName: "",
-    number: "",
-    city: "",
-  });
-
-  function handleChange(e) {
-    const { name, value } = e.target;
-    setInputValues({ ...inputValues, [name]: value });
-  }
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    console.log(inputValues);
-
-    let errors = validation;
-
-    //  First Name Validation
-    if (!inputValues.fName) {
-      errors.fName = "First-Name is required";
-    } else {
-      errors.fName = "";
-      handleNext()
-    }
-
-    return setValidation(errors);
+  const onSubmit = (data) => {
+    console.log(data);
+    handleNext();
   };
 
   return (
     <>
       <div className="form-container">
-        <h3 style={{ color: "blue" }}>Import File</h3>
-        <form className="form" onSubmit={handleSubmit} id={formID} key={formID}>
-          <div>
-            <input
-              type="text"
-              id="name"
-              name="fName"
-              placeholder="First-Name"
-              value={inputValues.fName}
-              onChange={handleChange}
-              // required
-            />
-            {validation.fName && (
-              <p style={{ color: "red" }}>{validation.fName}</p>
-            )}
-            {validation.fName && console.log(validation)}
-            <br />
+        <h3 style={{ color: "blue" ,marginLeft:"1.7rem"}}>DataMapping</h3>
+        <form
+          className="form"
+          onSubmit={handleSubmit(onSubmit)}
+          id={formID}
+          key={formID}
+        >
+          <input
+            type="text"
+            id="fullname"
+            name="fullname"
+            placeholder="Enter Your Name"
+            {...register("fullName", { required: true })}
+          />
+          {errors.fullName && (
+            <h6
+              style={{ color: "red", marginLeft: "1.6rem", fontSize: "15px" }}
+            >
+              Name is required.
+            </h6>
+          )}
+          <br />
 
-            <input
-              type="text"
-              placeholder="Last-Name"
-              name="lName"
-              onChange={handleChange}
-              value={inputValues.lName}
-              required
-            />
-          </div>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter Your Email"
+            {...register("email", { required: true })}
+          />
+          {errors.email && (
+            <h6
+              style={{ color: "red", marginLeft: "1.6rem", fontSize: "15px" }}
+            >
+              Email is required.
+            </h6>
+          )}
+          <br />
+          <input
+            type="text"
+            id="phone"
+            name="phone"
+            placeholder="Enter Your DataMapping"
+            {...register("phone", { required: true })}
+          />
+          {errors.phone && (
+            <h6
+              style={{ color: "red", marginLeft: "1.6rem", fontSize: "15px" }}
+            >
+              Number is required.
+            </h6>
+          )}
+          <br />
 
-          <div>
-            <input
-              type="text"
-              placeholder="Number"
-              name="number"
-              value={inputValues.number}
-              onChange={handleChange}
-              required
-            />
-            <input
-              type="text"
-              placeholder="City"
-              name="city"
-              value={inputValues.city}
-              onChange={handleChange}
-              required
-            />
-          </div>
+          <input
+            type="password"
+            id="passowrd"
+            name="password"
+            placeholder="Enter Your Passowrd"
+            {...register("password", { required: true })}
+          />
+          {errors.password && (
+            <h6
+              style={{ color: "red", marginLeft: "1.6rem", fontSize: "15px" }}
+            >
+              Password is required.
+            </h6>
+          )}
+          <br />
         </form>
       </div>
     </>
   );
 }
+

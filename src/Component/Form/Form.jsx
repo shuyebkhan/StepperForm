@@ -1,7 +1,8 @@
 import { DataMapping } from "./DataMapping";
-import EntityMapping from "./EntityMapping";
+import { EntityMapping } from "./EntityMapping";
 import { Import } from "./Import";
-import Summery from "./Summery";
+import { Summery } from "./Summery";
+import Popup from "./Popup";
 
 function Form(props) {
   let formData = [
@@ -9,6 +10,7 @@ function Form(props) {
     <DataMapping formID="formOne" handleNext={props.handleNext} />,
     <EntityMapping formID="formOne" handleNext={props.handleNext} />,
     <Summery formID="formOne" handleNext={props.handleNext} />,
+    <Popup />,
   ];
 
   return (
